@@ -23,16 +23,23 @@ Validate the HTML and CSS code.
 Publish the website in the given URL.
 
 # PROGRAM :
-'''
+```
 image.html
 
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Interactive Image Gallery</title>
+
   <style>
+  
     * {
       margin: 0;
       padding: 0;
@@ -104,28 +111,49 @@ image.html
       text-decoration: none;
     }
   </style>
+
 </head>
+
 <body>
 
   <div class="gallery">
+
     <div class="image-item">
+
       <img src="image1.png" alt="Image 1">
+
     </div>
+
     <div class="image-item">
+
       <img src="image2.png" alt="Image 2">
+
     </div>
+
     <div class="image-item">
+
       <img src="image3.png" alt="Image 3">
+
     </div>
+
     <div class="image-item">
+
       <img src="image4.png" alt="Image 4">
+
     </div>
+
     <div class="image-item">
+
       <img src="image5.png" alt="Image 5">
+
     </div>
+
     <div class="image-item">
+
         <img src="image6.png" alt="Image 4">
+
       </div>
+
   </div>
 
   <div id="modal" class="modal">
@@ -134,36 +162,56 @@ image.html
   </div>
 
   <script>
+
     
     const modal = document.getElementById("modal");
 
+
     const modalImg = document.getElementById("modal-img");
+
 
     const images = document.querySelectorAll(".image-item img");
 
+
     const closeBtn = document.getElementById("close");
 
+
     images.forEach((image) => {
+
       image.addEventListener("click", () => {
+
         modal.style.display = "flex";
+
         modalImg.src = image.src;
+
       });
+
     });
+
 
     closeBtn.addEventListener("click", () => {
+
       modal.style.display = "none";
+
     });
 
+
     modal.addEventListener("click", (event) => {
+
       if (event.target === modal) {
+
         modal.style.display = "none";
+
       }
+
     });
+
   </script>
 
 </body>
+
 </html>
-'''
+```
 
 # OUTPUT:
 ![alt text](<Screenshot 2025-05-03 144819.png>)
